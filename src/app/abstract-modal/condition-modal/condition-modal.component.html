@@ -1,0 +1,61 @@
+<div class="condition-modal-container">
+    
+    <div class="condition-modal-content">
+        <div class="condition-modal-row">
+        
+            <span class="condition-modal-label">
+                TARGET
+            </span>
+    
+            <div class="condition-modal-input-section">
+                <select class="chili-select-box condition-modal-input-field" (change)="setTarget($event)">
+                    <option *ngFor="let targetOption of getTargets()" 
+                    [value]="targetOption.value" 
+                    [selected]="targetOption.value == target">
+                        {{ targetOption.label }}
+                    </option>
+                </select>
+            </div>
+    
+        </div>
+    
+        <div class="condition-modal-row">
+    
+            <span class="condition-modal-label">
+                OPERATION
+            </span>
+    
+            <div class="condition-modal-input-section">
+                <select class="chili-select-box condition-modal-input-field" (change)="setOperation($event)">
+                    <option *ngFor="let operationOption of getOperations()" 
+                    [value]="operationOption.value" 
+                    [selected]="operationOption.value == operation">
+                        {{ operationOption.label }}
+                    </option>
+                </select>
+            </div>
+    
+        </div>
+    
+        <div class="condition-modal-row">
+            
+            <span class="condition-modal-label">
+                VALUE
+            </span>
+    
+            <div class="condition-modal-input-section">
+                <input class="chili-text-box condition-modal-input" (change)="setValue($event)" />
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="control-row">
+        
+        <button class="chili-button control-btn" (click)="onSelfClose()">CANCEL</button>
+        <button class="chili-button control-btn" (click)="onAddTrigger()">CREATE</button>
+
+    </div>
+
+</div>

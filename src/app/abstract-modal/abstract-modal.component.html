@@ -1,0 +1,35 @@
+<div class="abstract-modal-container">
+
+    <div class="abstract-modal">
+
+        <div class="abstract-modal-title-row">
+            <div class="abstract-modal-title">
+                CREATE TRIGGER
+            </div>
+            <div class="abstract-modal-close-btn prevent-select" (click)="onSelfClose()">
+                X
+            </div>
+        </div>
+
+        <div class="abstract-modal-controls">
+            <button class="chili-button abstract-control-btn" 
+                    [ngClass]="[isTimeActive() ? 'abstract-control-btn-selected' : '']" 
+                    (click)="setActive(getTriggerTypeEnum().TIME)">TIME</button>
+            <button class="chili-button abstract-control-btn" 
+                    [ngClass]="[isConditionActive() ? 'abstract-control-btn-selected' : '']" 
+                    (click)="setActive(getTriggerTypeEnum().CONDITION)">CONDITION</button>
+        </div>
+
+        <div class="abstract-modal-content">
+            <TimeModal *ngIf="isTimeActive()" 
+            (onCreate)="onCreateTrigger($event)" 
+            (onClose)="onSelfClose()"></TimeModal>
+            
+            <ConditionModal *ngIf="isConditionActive()" 
+            (onCreate)="onCreateTrigger($event)" 
+            (onClose)="onSelfClose()"></ConditionModal>
+        </div>
+
+    </div>
+
+</div>

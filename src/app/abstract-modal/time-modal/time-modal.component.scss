@@ -1,0 +1,82 @@
+@use '../../variables' as variables;
+
+:host {
+    display: inline-flex;
+}
+
+.time-modal-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.time-modal-content {
+    position: relative;
+    height: calc(100% - 20px);
+    width: 100%;
+    padding-block: 10px;
+}
+
+.time-modal-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-family: variables.$chili-font-family;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+}
+
+.time-modal-input-section {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.time-modal-input-field {
+    height: 30px;
+}
+
+.time-modal-input {
+    position: relative;
+    height: 20px;
+    padding: 3px;
+    width: calc(100% - 10px);
+}
+
+.time-modal-label {
+    display: flex;
+    align-self: center;
+    padding-inline-start: 10px;
+}
+
+.time-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.time-select {
+    height: 100%;
+    width: 100%;
+}
+
+.control-row {
+    position: relative;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-family: variables.$chili-font-family;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+}
+
+.control-btn {
+    height: 40px;
+    margin: 3px;
+}

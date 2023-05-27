@@ -1,0 +1,90 @@
+@use '../variables' as variables;
+
+.abstract-modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: variables.$chili-lvl-top;
+    background-color: variables.$chili-overlay-background-lvl-3;
+}
+
+.abstract-modal {
+    position: relative;
+    width: 400px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: variables.$chili-background-lvl-1;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.abstract-modal-title-row {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: variables.$chili-background-lvl-0;
+}
+
+.abstract-modal-title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: variables.$chili-font-family;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+    width: 100%;
+    padding-inline: 10px;
+}
+
+.abstract-modal-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.abstract-modal-close-btn {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-family: variables.$chili-font-family;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+    cursor: pointer;
+}
+
+.abstract-modal-close-btn:hover {
+    background-color: variables.$chili-background-warning;
+}
+
+.abstract-modal-controls {
+    position: relative;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-family: variables.$chili-font-family;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+}
+
+.abstract-control-btn {
+    height: 40px;
+    margin: 3px;
+}
+
+.abstract-control-btn-selected {
+    border: 2px solid variables.$chili-border-lvl-0;
+}

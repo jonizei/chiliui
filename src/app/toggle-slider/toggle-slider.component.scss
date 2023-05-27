@@ -1,0 +1,33 @@
+@use '../variables' as variables;
+
+.toggle-slider {
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.toggle-slider-rail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$chili-background-lvl-3;
+    padding: 3px;
+}
+
+.toggle-slider-rail-active {
+    background-color: variables.$chili-active-lvl-1;
+}
+
+.toggle-slider-thumb {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    transition: float 1s;
+    background-color: variables.$chili-background-lvl-1;
+}
+
+.toggle-slider-thumb-active {
+    float: right;
+    background-color: variables.$chili-active-lvl-0;
+}

@@ -1,0 +1,37 @@
+<div class="record-page-container">
+    <div class="record-table-container">
+        <table class="record-table">
+        
+            <tr class="record-table-header-row">
+    
+                <th class="record-table-header">Air Temperature</th>
+    
+                <th class="record-table-header">Air Pressure</th>
+    
+                <th class="record-table-header">Humidity</th>
+    
+                <th class="record-table-header">Light</th>
+    
+                <th class="record-table-header">Timestamp</th>
+    
+            </tr>
+    
+            <tr *ngFor="let record of chilirecords" class="record-table-row">
+    
+                <td class="record-table-column">
+                    <span class="col-test">{{ record.air_temperature }}</span>
+                </td>
+    
+                <td class="record-table-column">{{ record.air_pressure }}</td>
+    
+                <td class="record-table-column">{{ record.humidity }}</td>
+    
+                <td class="record-table-column">{{ record.light == null ? 0 : record.light }}</td>
+    
+                <td class="record-table-column">{{ record.datetime }}</td>
+    
+            </tr>
+    
+        </table>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="outlet-container">
+    <div class="outlet-header-row">
+        <div class="outlet-name outlet-header">
+            {{ name }}
+        </div>
+        <div class="outlet-status outlet-header">
+            Status: {{ getStatus() }}
+        </div>
+        <div class="outlet-slider outlet-header">
+            <ToggleSlider 
+            [isToggled]="isToggled()" 
+            (onToggle)="setStatus($event)"></ToggleSlider>
+        </div>
+    </div>
+    <div class="outlet-content">
+        
+        <div class="outlet-trigger-controls">
+            <button class="btn-add-trigger" (click)="onOpenTriggerModal()">ADD</button>
+        </div>
+
+        <div class="outlet-trigger-list">
+            <Trigger *ngFor="let trigger of triggers" 
+            [id]="trigger.id" 
+            [type]="trigger.type" 
+            [target]="getTarget(trigger)" 
+            [operation]="getOperation(trigger)" 
+            [value]="getValue(trigger)" (onRemove)="onRemoveTrigger(trigger.id)"></Trigger>
+        </div>
+
+    </div>
+</div>

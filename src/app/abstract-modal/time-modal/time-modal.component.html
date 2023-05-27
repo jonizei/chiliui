@@ -1,0 +1,70 @@
+<div class="time-modal-container">
+    
+    <div class="time-modal-content">
+        <div class="time-modal-row">
+        
+            <span class="time-modal-label">
+                DAY
+            </span>
+    
+            <div class="time-modal-input-section">
+                <select class="chili-select-box time-modal-input-field" (change)="setWeekday($event)">
+                    <option *ngFor="let day of getWeekdays()" 
+                    [value]="day.value" 
+                    [selected]="day.value == weekday">
+                        {{ day.label }}
+                    </option>
+                </select>
+            </div>
+    
+        </div>
+    
+        <div class="time-modal-row">
+    
+            <span class="time-modal-label">
+                TIME
+            </span>
+    
+            <div class="time-modal-input-section">
+                <div class="time-input time-modal-input-field">
+                    <select class="chili-select-box hour-select time-select" (change)="setHour($event)">
+                        <option *ngFor="let hour of getHours()" 
+                        [value]="hour.value" 
+                        [selected]="hour.value == time.hour">
+                            {{ hour.label }}
+                        </option>
+                    </select>
+                    <select class="chili-select-box minute-select time-select" (change)="setMinute($event)">
+                        <option *ngFor="let minute of getMinutes()" 
+                        [value]="minute.value" 
+                        [selected]="minute.value == time.minute">
+                            {{ minute.label }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="time-modal-row">
+            
+            <span class="time-modal-label">
+                DURATION
+            </span>
+    
+            <div class="time-modal-input-section">
+                <input class="chili-text-box time-modal-input" (change)="setDuration($event)" />
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="control-row">
+        
+        <button class="chili-button control-btn" (click)="onSelfClose()">CANCEL</button>
+        <button class="chili-button control-btn" (click)="onAddTrigger()">CREATE</button>
+
+    </div>
+
+</div>

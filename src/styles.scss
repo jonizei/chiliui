@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@use '/src/app/variables' as variables;
+
+html, body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.chili-select-box {
+    border-radius: 0;
+    border: 2px solid variables.$chili-border-lvl-0;
+    background-color: variables.$chili-background-lvl-3;
+    color: variables.$chili-text-light-lvl-1;
+    font-weight: 500;
+}
+
+.chili-text-box {
+    border-radius: 0;
+    border: 2px solid variables.$chili-border-lvl-0;
+    background-color: variables.$chili-background-lvl-3;
+    color: variables.$chili-text-light-lvl-1;
+    font-weight: 500;
+}
+
+.chili-text-box:focus {
+    outline: none;
+}
+
+.chili-button {
+    border: none;
+    background-color: variables.$chili-background-lvl-3;
+    color: variables.$chili-text-light-lvl-1;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<div class="outlet-page-container">
+    <Outlet *ngFor="let outlet of chilioutlets" 
+    [id]="outlet.id" 
+    [name]="outlet.name" 
+    [stayOn]="outlet.stay_on" 
+    [isOn]="outlet.is_on" 
+    [triggers]="outlet.triggers"></Outlet>
+</div>

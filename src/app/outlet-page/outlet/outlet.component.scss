@@ -1,0 +1,66 @@
+@use '../../variables' as variables;
+
+.outlet-container {
+    position: relative;
+    width: 100%;
+    background-color: variables.$chili-background-lvl-3;
+    font-family: variables.$chili-font-family;
+    margin-bottom: 10px;
+}
+
+.outlet-header-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    background-color: variables.$chili-background-lvl-1;
+    font-weight: 600;
+    color: variables.$chili-text-light-lvl-1;
+    padding: 10px;
+    align-items: center;
+}
+
+.outlet-status {
+    display: flex;
+    justify-content: center;
+}
+
+.outlet-header {
+    width: 100%;
+    padding: 5px;
+}
+
+.outlet-slider {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.outlet-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.outlet-trigger-controls {
+    position: relative;
+    width: 100%;
+    padding-block: 10px;
+}
+
+.outlet-trigger-list {
+    position: relative;
+    width: 100%;
+}
+
+.btn-add-trigger {
+    position: relative;
+    float: right;
+    border-radius: 0px;
+    border: none;
+    background-color: variables.$chili-background-lvl-1;
+    padding-block: 10px;
+    padding-inline: 15px;
+    color: variables.$chili-text-light-lvl-1;
+    font-weight: 600;
+    cursor: pointer;
+}

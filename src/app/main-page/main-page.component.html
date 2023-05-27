@@ -1,0 +1,13 @@
+<div class="main-page-container">
+
+    <AbstractModal *ngIf="isModalOpen()" (onClose)="onCloseModal()"></AbstractModal>
+    
+    <div class="main-page-section">
+        <RecordPage></RecordPage>
+    </div>
+
+    <div class="main-page-section">
+        <OutletPage></OutletPage>
+    </div>
+
+</div>
