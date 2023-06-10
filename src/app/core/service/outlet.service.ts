@@ -3,16 +3,15 @@ import { Injectable, OnInit } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { ChiliOutlet } from "../model/chili-outlet";
 import { ChiliTrigger } from "../model/chili-trigger";
+import { environment } from "src/environments/environment";
 
 @Injectable()
 export class OutletService {
 
-    private readonly apiUrl : string = 'http://192.168.5.212:8080';
+    private readonly apiUrl : string = environment.API_URL;
     private outletList : BehaviorSubject<Array<ChiliOutlet>> = new BehaviorSubject<Array<ChiliOutlet>>([]);
 
-    constructor(private http: HttpClient) {
-
-    }
+    constructor(private http: HttpClient) {}
 
     getOutlets() : BehaviorSubject<Array<ChiliOutlet>> {
         return this.outletList;
